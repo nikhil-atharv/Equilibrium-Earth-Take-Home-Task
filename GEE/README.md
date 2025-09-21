@@ -7,8 +7,11 @@ https://code.earthengine.google.com/ac6e47e039772157343b484f28c3dfab
 
 **Method employed for Resampling the 10m resolution sentinel - 2 L2A to 1m resolution**
 1. We have used two key functions
+   
    image.resample('bilinear')
+   
    image.reproject('EPSG:32644', null, 1)
+   
 2. The function .resample(method) used when we need to sample this image at pixels that don't line up with the image's native grid. 'bilinear' - linear interpolation using the 4 nearest pixels (good for continuous data: reflectance, NDVI, temperature).
 3. The function .reproject(crs, crs_transform, scale) forces the image to be interpreted (and sampled) in that projection and at that scale. If the image's native resolution is coarser (e.g., Sentinel-2 10 m), GEE will upsample to 1 m; if finer, it will downsample. Because you set resample('bilinear'), that up/down-sampling will use bilinear interpolation.
 The chain ensures: when GEE has to compute pixel values in the EPSG:32644 grid at 1 m, it will use bilinear interpolation to compute those values from the input image pixels.
