@@ -3,7 +3,8 @@
 **eq_open_source_python.ipynb** file contains complete pipeline from accessing the data to final zonal statistics and exporting the results in python:
 
 **Method employed for Resampling the 10m resolution sentinel - 2 L2A to 1m resolution**
-1. We have used function from rioxarray backed by rasterio:
+1. Only four bands (B02, B03, B04, B08) are used as inpits for analysis to limit computation load on resampling
+2. We have used function from rioxarray backed by rasterio:
 
       Resampled = xarray.DataArray.rio.reproject(
                                                    crs = 'EPSG:32644',
@@ -11,7 +12,7 @@
                                                    resampling = Resampling.bilinear
                                                  )
 
-2. The function Resample.bilinear is imported from rasterio.enums library. It is used when we need to sample this image at pixels that don't line up with the image's native grid. 'bilinear' - linear interpolation using the 4 nearest pixels (good for continuous data: reflectance, NDVI, temperature).
+3. The function Resample.bilinear is imported from rasterio.enums library. It is used when we need to sample this image at pixels that don't line up with the image's native grid. 'bilinear' - linear interpolation using the 4 nearest pixels (good for continuous data: reflectance, NDVI, temperature).
 4. The function .reproject(crs, resolution, resampling) forces the image to be interpreted (and sampled) in that projection and at that scale. If the image's native resolution is coarser (e.g., Sentinel-2 10 m).
 
 
