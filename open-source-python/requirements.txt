@@ -1,0 +1,15 @@
+python ~ 3.13
+pystac-client
+planetary-computer
+geopandas
+pandas
+rasterio
+rasterstats
+leafmap
+matplotlib
+stackstac
+rioxarray
+xarray
+xarray-spatial
+localtileserver
+numpy
