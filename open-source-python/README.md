@@ -20,6 +20,16 @@
 
 Use of s2dr3 model (Sentinel 2 Deep Resolution 3.0): A deep learning model from Google Alpha Earth Foundation. Which directly gives the MS image at given date and region (x, y).
 
+    !pip -q install https://storage.googleapis.com/0x7ff601307fa5/s2dr3-20250905.1-cp312-cp312-linux_x86_64.whl
+
+    import s2dr3.inferutils
+
+    lonlat = (x, y)
+
+    datetime = 'YYYY-MM-DD'
+
+    s2dr3.inferutils.test(lonlat, date)
+
 Though we have employed normal resampling technique to upsample 10m sentinel image to 1m. The resulted tiffs can be found in Zip File link. 
 
 https://drive.google.com/file/d/1Df9p1azzGXKoSdNvvHWQqaqe1YSt-gHS/view?usp=sharing 
