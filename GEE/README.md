@@ -34,7 +34,7 @@ NDVI > 3.0 = Dense vegetation
 
 This varies according area of interest and density of vegetation presence. 
 
-Hence threshold value = 0.40 was fixed. Based on following approach. 
+Hence threshold value = 0.40 was fixed for binary classification of NDVI. Based on following approach. 
 
 The NDVI threshold values were established through an iterative and systematic process involving detailed pixel-level examination of NDVI layers. Multiple rounds of inspection were carried out to evaluate the spectral responses of different land cover types. A trial-and-error approach was employed, wherein provisional threshold ranges were applied, evaluated against reference observations, and subsequently refined. This iterative adjustment ensured that the final thresholds reliably distinguished the target classes while minimizing misclassification. The process was repeated multiple times to enhance the robustness and reproducibility of the selected threshold values
 
