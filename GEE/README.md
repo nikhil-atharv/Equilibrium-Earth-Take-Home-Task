@@ -40,5 +40,9 @@ The NDVI threshold values were established through an iterative and systematic p
 
 **NOTE**: The NDVI threshold values derived using the Google Earth Engine (GEE) approach and the PySTAC client vary due to differences in preprocessing steps, such as atmospheric correction, resampling methods, projection handling, and scaling of reflectance values, which can influence the computed NDVI distribution
 
+**Outputs**
+1. screening_results_GEE.geojson: output from GEE (Java script)
+2. screening_results_python_GEE.geojson: output from GEE (python)
+
 
 
