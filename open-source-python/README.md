@@ -26,7 +26,7 @@ Use of s2dr3 model (Sentinel 2 Deep Resolution 3.0): A deep learning model from 
 
     lonlat = (x, y)
 
-    datetime = 'YYYY-MM-DD'
+    date = 'YYYY-MM-DD'
 
     s2dr3.inferutils.test(lonlat, date)
 
