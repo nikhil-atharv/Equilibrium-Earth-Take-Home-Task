@@ -6,7 +6,7 @@
 1. Only four bands (B02, B03, B04, B08) are used as inpits for analysis to limit computation load on resampling
 2. We have used function from rioxarray backed by rasterio:
 
-      Resampled = xarray.DataArray.rio.reproject(
+                   xarray.DataArray.rio.reproject(
                                                    crs = 'EPSG:32644',
                                                    resolution = (1, 1)
                                                    resampling = Resampling.bilinear
