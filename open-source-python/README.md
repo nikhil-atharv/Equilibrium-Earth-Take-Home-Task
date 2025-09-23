@@ -18,7 +18,7 @@
 
 **Alternative Method for Super Resolution**
 
-Use of s2dr3 model (Sentinel 2 Deep Resolution 3.0): A deep learning model from Google Alpha Earth Foundation. Which directly gives the MS image at given date and region (x, y).
+Use of s2dr3 model (Sentinel 2 Deep Resolution 3.0): A deep learning model from Google Alpha Earth Foundation. Which directly gives the MS image at 1m resolution for given date and region (x, y).
 
     !pip -q install https://storage.googleapis.com/0x7ff601307fa5/s2dr3-20250905.1-cp312-cp312-linux_x86_64.whl
 
